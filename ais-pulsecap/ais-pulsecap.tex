@@ -3,6 +3,8 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{geometry}
+\usepackage{placeins}
+\usepackage{float}
 
 \begin{document}
 
@@ -14,10 +16,11 @@
 \section{Introduction}
 
 Applied Ion Systems (AIS) requested a failure analysis of a Kemet C4540H683KGGWCT050 pulse capacitor, which had failed
-catastrophically during maximum-power (2 kV) test firing of a prototype AIS-gPPT3-1C-T pulsed plasma thruster.
+catastrophically (Fig. \ref{failure}) during maximum-power (2 kV) test firing of a prototype AIS-gPPT3-1C-T pulsed
+plasma thruster.
 
 \begin{figure}[h]
-\includegraphics[scale=0.35]{cap-failure.jpg}
+\includegraphics[width=10cm,keepaspectratio]{cap-failure.jpg}
 \caption{Video frame from test chamber at the moment of failure}
 \label{failure}
 \end{figure}
@@ -30,13 +33,13 @@ This document is licensed under Creative Commons Attribution-NonCommercial-NoDer
 \section{Specimen Overview}
 
 Two Kemet C4540H683KGGWCT050 capacitors were provided by AIS: the failed part, as well as an identical undamaged
-capacitor removed from the failed board to be used for process development and testing.
+capacitor (Fig. \ref{overview}) removed from the failed board to be used for process development and testing.
 
 The capacitor is a 11.4 x 10.2 x 2.7 mm multi-layer ceramic capacitor (MLCC) using C0G-type dielectric, with a nominal
-capacitance of 68 nF and a 2 kV voltage rating.
+capacitance of 68 nF and a 2 kV maximum voltage rating. It is intended for high voltage pulsed discharge applications.
 
 \begin{figure}[h]
-\includegraphics[scale=0.25]{01-goodcap-top_annotated.jpg}
+\includegraphics[width=10cm,keepaspectratio]{01-goodcap-top_annotated.jpg}
 \caption{Top view of undamaged capacitor}
 \label{overview}
 \end{figure}
@@ -44,25 +47,84 @@ capacitance of 68 nF and a 2 kV voltage rating.
 \pagebreak
 \section{Analysis}
 
-Preliminary optical imaging of the failed side of the capacitor showed a cratered region with long cracks radiating
-lengthwise down the capacitor body.
+\subsection{Overview}
+
+Preliminary optical imaging of the failed side of the capacitor (Fig. \ref{fail-overview}, Fig. \ref{fail-closeup})
+showed a cratered region with long cracks radiating lengthwise down the capacitor body.
 
 \begin{figure}[h]
-\includegraphics[scale=0.25]{02-badcap-side_annotated.jpg}
+\includegraphics[width=8cm,keepaspectratio]{02-badcap-side_annotated.jpg}
 \caption{Overview of failure site}
 \label{fail-overview}
 \end{figure}
 
 \begin{figure}[h]
-\includegraphics[scale=0.25]{03-badcap-side_annotated.jpg}
+\includegraphics[width=8cm,keepaspectratio]{03-badcap-side_annotated.jpg}
 \caption{Closeup of failure site}
 \label{fail-closeup}
 \end{figure}
+
+\FloatBarrier
+
+\subsection{Initial Sectioning}
 
 The large size of the capacitor presented some unique challenges for analysis, since it was too large to fit edgewise
 into most standard embedding molds.
 
 Experimentation with using power tools to cut down the test capacitor led to excessive cracking, so bulk material
-removal on the actual specimen was performed by hand sanding using 150 and 220 grit aluminum oxide sandpaper.
+removal on the failed specimen was performed by hand sanding using P150 and P220 $Al_2O_3$ sandpaper.
+
+The sample was embedded in epoxy resin (AA-Bond F110, Atom Adhesives, Fig.\ref{section-overview}) and ground with P220
+$Al_2O_3$ sandpaper until the solder and copper terminal were removed. A preliminary cross section immediately past the
+terminal surface (slightly to the left of the green bar in Fig. \ref{section-plane}) was polished with P500, P1200,
+P2000, P3000, P5000, P8000, and P10000 $SiC$ sandpaper, then lapped with 300 nm $Al_2O_3$ to produce an optically flat
+surface
+
+\begin{figure}[h]
+\includegraphics[width=10cm,keepaspectratio]{section-plane.jpg}
+\caption{Cross sectioning plane orientation relative to capacitor body}
+\label{section-plane}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{07-section1-7x_annotated.jpg}
+\caption{Cross section overview}
+\label{section-overview}
+\end{figure}
+
+This section showed a stack of 64 plates (Fig. \ref{section-plates}) with a total thickness of $1610 \mu m$, separated
+from the top and bottom component faces by $355 \mu m$ of ceramic shell. Shell thickness from the edges of the plate
+stack to the sides of the capacitor was $245 \mu m$.
+
+Plates were approximately $1.4 \mu m$ thick, separated by $25 \mu m$ of the C0G dielectric. Since this section was
+taken immediately adjacent to a terminal, only plates connecting to this terminal were visible. The core of the
+capacitor presumably contains 128 plates at approximately $11.8 \mu m$ spacing.
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{06-section1-45x_annotated2.jpg}
+\caption{Cross section showing dielectric thicknesses and locations of some cracks}
+\label{section-plates}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{section1_09_df_neo40x_annotated2.jpg}
+\caption{Thickness and spacing of capacitor plates in terminal area}
+\label{plate-dimensions}
+\end{figure}
+
+Numerous cracks in the dielectric (Fig. \ref{cracks1}, Fig. \ref{cracks2}) were visible on the side of the capacitor
+closest to the failure site. These are likely the result of thermal stress during overheating at the moment of failure.
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{section1_05_df_neo20x_annotated.jpg}
+\caption{Crack at right corner of topmost capacitor plate.}
+\label{cracks1}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{section1_06_df_neo20x_annotated.jpg}
+\caption{Crack at right side of capacitor}
+\label{cracks2}
+\end{figure}
 
 \end{document}
