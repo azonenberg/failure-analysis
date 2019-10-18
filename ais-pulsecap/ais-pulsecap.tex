@@ -5,6 +5,7 @@
 \usepackage{geometry}
 \usepackage{placeins}
 \usepackage{float}
+\usepackage{siunitx}
 
 \begin{document}
 
@@ -16,8 +17,8 @@
 \section{Introduction}
 
 Applied Ion Systems (AIS) requested a failure analysis of a Kemet C4540H683KGGWCT050 pulse capacitor, which had failed
-catastrophically (Fig. \ref{failure}) during maximum-power (2 kV) test firing of a prototype AIS-gPPT3-1C-T pulsed
-plasma thruster.
+catastrophically with visible arcing and ejection of material (Fig. \ref{failure}) during maximum-power (2 kV) test
+firing of a prototype AIS-gPPT3-1C-T pulsed plasma thruster.
 
 \begin{figure}[h]
 \includegraphics[width=10cm,keepaspectratio]{cap-failure.jpg}
@@ -66,7 +67,7 @@ showed a cratered region with long cracks radiating lengthwise down the capacito
 
 \FloatBarrier
 
-\subsection{Initial Sectioning}
+\subsection{Slice 1}
 
 The large size of the capacitor presented some unique challenges for analysis, since it was too large to fit edgewise
 into most standard embedding molds.
@@ -97,8 +98,7 @@ from the top and bottom component faces by $355 \mu m$ of ceramic shell. Shell t
 stack to the sides of the capacitor was $245 \mu m$.
 
 Plates were approximately $1.4 \mu m$ thick, separated by $25 \mu m$ of the C0G dielectric. Since this section was
-taken immediately adjacent to a terminal, only plates connecting to this terminal were visible. The core of the
-capacitor presumably contains 128 plates at approximately $11.8 \mu m$ spacing.
+taken immediately adjacent to a terminal, only plates connecting to this terminal were visible.
 
 \begin{figure}[h]
 \includegraphics[width=11cm,keepaspectratio]{06-section1-45x_annotated2.jpg}
@@ -126,5 +126,66 @@ closest to the failure site. These are likely the result of thermal stress durin
 \caption{Crack at right side of capacitor}
 \label{cracks2}
 \end{figure}
+
+\FloatBarrier
+
+\subsection{Slice 2}
+
+The sample was ground down by $100 \mu m$ and polished using the same procedure as the previous section. The same five
+large cracks seen in the first section were visible here (Fig. \ref{section2_1}), propagating from the affected plates
+to the side of the component. This delamination extended a significant distance through the capacitor, however it was
+difficult to identify an exact end point.
+
+The 64 even and 63 odd plates (127 total, 126 gaps) were uniformly separated by $11.8 \mu m$ (Fig.
+\ref{plate-geometry}) of C0G dielectric. Even numbered plates (connecting to the far terminal) were displaced to the
+left by approximately $140 \mu m$ with respect to the odd numbered plates, however there was approximately
+$\pm 10 \mu m$ of variability in exact horizontal position of each plate.
+
+The center crack (closest to the actual blowout location) exhibited rounded fracture/spall patterns along it (Fig.
+\ref{spalling}, \ref{spalling2}, \ref{spalling3}). Based on external examination (Fig. \ref{fail-overview}) this crack
+appears to extend through most of the device. The damage appears to be more severe than the other cracks, which is
+consistent with its location close to the externally visible failure.
+
+\begin{figure}[h]
+\includegraphics[width=14cm,keepaspectratio]{section2_02_df_neo4x_annotated.jpg}
+\caption{Upper right corner of section 2}
+\label{section2_1}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{section2_03_df_neo10x_annotated.jpg}
+\caption{Closeup of upper right corner}
+\label{section2_2}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{section2_05_df_neo20x_annotated.jpg}
+\caption{Geometry of even/odd capacitor plates}
+\label{plate-geometry}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{section2_07_df_neo20x_annotated.jpg}
+\caption{Spalling around center plate, right side of plate stack}
+\label{spalling}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{section2_09_bf_neo40x_annotated.jpg}
+\caption{Spalling around center plate, right side of plate stack}
+\label{spalling2}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=11cm,keepaspectratio]{section2_10_df_neo40x_annotated.jpg}
+\caption{Spalling around center plate, center of plate stack}
+\label{spalling3}
+\end{figure}
+
+\FloatBarrier
+\subsection{Slice 3}
+The sample was ground down by an additional $100 \mu m$. No findings of note were observed in this section.
+
+\subsection{Slice 4}
 
 \end{document}
